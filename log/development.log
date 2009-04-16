@@ -1,0 +1,78 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSleepLogs (20090416014631)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "sleep_logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slp_day" varchar(255), "slp_time" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090416014631')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sleep_logs")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSleepLogs (20090416014631)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sleep_logs")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-16 03:52:56) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-16 03:52:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SleepLogsController#index (for 127.0.0.1 at 2009-04-16 03:53:31) [GET]
+  [4;36;1mSleepLog Load (0.4ms)[0m   [0;1mSELECT * FROM "sleep_logs" [0m
+Rendering template within layouts/sleep_logs
+Rendering sleep_logs/index
+Completed in 72ms (View: 67, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing SleepLogsController#new (for 127.0.0.1 at 2009-04-16 03:53:33) [GET]
+Rendering template within layouts/sleep_logs
+Rendering sleep_logs/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sleep_logs/new]
+
+
+Processing SleepLogsController#index (for 127.0.0.1 at 2009-04-16 03:53:34) [GET]
+  [4;35;1mSleepLog Load (0.3ms)[0m   [0mSELECT * FROM "sleep_logs" [0m
+Rendering template within layouts/sleep_logs
+Rendering sleep_logs/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/sleep_logs]

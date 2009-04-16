@@ -1,0 +1,12 @@
+<h1>Editing sleep_log</h1>
+
+<% form_for(@sleep_log) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sleep_log %> |
+<%= link_to 'Back', sleep_logs_path %>

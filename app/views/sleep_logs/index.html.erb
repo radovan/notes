@@ -1,0 +1,18 @@
+<h1>Listing sleep_logs</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @sleep_logs.each do |sleep_log| %>
+  <tr>
+    <td><%= link_to 'Show', sleep_log %></td>
+    <td><%= link_to 'Edit', edit_sleep_log_path(sleep_log) %></td>
+    <td><%= link_to 'Destroy', sleep_log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sleep_log', new_sleep_log_path %>
